@@ -1,0 +1,107 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 15px 0;
+  background: rgba(31, 30, 30, 0.664);
+  border-bottom: 3px solid #3d3d3d60;
+}
+
+.header-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  /* margin-left: -0px;        */
+}
+
+.logo-image {
+  height: 55px;             /* Good desktop size */
+  width: auto;
+  max-width: 340px;
+  object-fit: contain;
+  border-radius: 12px;
+  background: white;
+  padding: 8px;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  gap: 32px;
+  flex-shrink: 0;
+  margin-top: 25px;          /* Balanced down position */
+  align-self: flex-start;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.08rem;
+  transition: color 0.3s ease;
+  padding: 8px 0;
+}
+
+.nav a:hover {
+  color: #e74c3c;
+}
+
+/* ==================== RESPONSIVE ==================== */
+
+@media (max-width: 1200px) {
+  .logo {
+    margin-left: -15px;
+  }
+}
+
+@media (max-width: 992px) {
+  .nav {
+    gap: 24px;
+    margin-top: 20px;
+  }
+  .logo-image {
+    height: 110px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 12px 0;
+  }
+  .logo {
+    margin-left: -10px;
+  }
+  .logo-image {
+    height: 85px;
+    max-width: 240px;
+  }
+  .nav {
+    margin-top: 12px;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo {
+    margin-left: -5px;
+  }
+  .logo-image {
+    height: 70px;
+  }
+  .nav {
+    gap: 16px;
+    font-size: 1rem;
+  }
+}

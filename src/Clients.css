@@ -1,0 +1,69 @@
+.clients-section {
+  padding: 80px 20px;
+  background-color: white;
+  overflow: hidden;           /* Important */
+}
+
+.clients-title {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 50px;
+  color: #1a1a1a;
+}
+
+.marquee-container {
+  overflow: hidden;           /* Prevents scrollbar */
+  position: relative;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.marquee {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  animation: marquee 30s linear infinite;
+  white-space: nowrap;
+  width: max-content;         /* Important */
+}
+
+.client-logo {
+  height: 65px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+  
+  flex-shrink: 0;             /* Prevent shrinking */
+}
+
+.client-logo:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+/* Infinite Scroll Animation */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pause on hover */
+.marquee-container:hover .marquee {
+  animation-play-state: paused;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .client-logo {
+    height: 50px;
+  }
+  .marquee {
+    gap: 40px;
+  }
+}

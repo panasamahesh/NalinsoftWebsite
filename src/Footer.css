@@ -1,0 +1,153 @@
+.footer {
+  background-color: #0f172a;
+  color: #cbd5e1;
+  padding: 80px 20px 30px;
+}
+
+.footer-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  gap: 60px;
+}
+.Nalin{
+  height: 80px;
+  width: 70%;
+}
+.footer-col h3 {
+  color: white;
+  font-size: 1.4rem;
+  margin-bottom: 25px;
+}
+
+.logo-col .footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.logo-circle {
+  width: 55px;
+  height: 55px;
+  background: #ef4444;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: bold;
+  border-radius: 50%;
+}
+
+.logo-text {
+  font-size: 28px;
+  font-weight: 700;
+  color: white;
+}
+
+.company-desc {
+  line-height: 1.7;
+  max-width: 380px;
+  margin-bottom: 30px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  background: #1e2937;
+  color: #cbd5e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  transition: 0.3s;
+}
+
+.social-icon:hover {
+  background: #ef4444;
+  color: white;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 12px;
+}
+
+.footer-col a {
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-col a:hover {
+  color: #ef4444;
+}
+
+.branches {
+  line-height: 1.7;
+  font-size: 0.98rem;
+}
+
+.branch {
+  margin-bottom: 25px;
+}
+
+.branch strong {
+  color: white;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  margin-top: 60px;
+  padding-top: 25px;
+  border-top: 1px solid #334155;
+  text-align: center;
+  color: #94a3b8;
+  font-size: 0.95rem;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+}
+/* Wave Divider */
+.wave-divider {
+  height: 60px;
+  background: linear-gradient(to right, #0f172a, #1e2937);
+  position: relative;
+  overflow: hidden;
+}
+
+.wave-divider::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: #0f172a;
+  border-radius: 50% 50% 0 0;
+  transform: scaleX(1.5);
+}
