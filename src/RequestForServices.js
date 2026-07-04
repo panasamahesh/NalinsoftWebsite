@@ -93,7 +93,7 @@ const RequestForServices = () => {
           </div>
 
           <form
-            action="https://formsubmit.co/byruanilkumar011@gmail.com"
+            action="https://formsubmit.co/vthota@nalinsoft.com"
             method="POST"
             className="service-form"
           >
