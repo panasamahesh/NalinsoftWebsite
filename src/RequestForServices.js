@@ -16,42 +16,25 @@ const RequestForServices = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-
     let cleanedValue = value;
 
-    // Clean spaces for email and phone
     if (name === 'email') {
-      cleanedValue = value.trim();           // Remove leading/trailing spaces
-    } 
-    else if (name === 'phone') {
-      // Allow only numbers, spaces, +, -, () 
+      cleanedValue = value.trim();
+    } else if (name === 'phone') {
       cleanedValue = value.replace(/[^0-9+\-\s()]/g, '');
     }
 
-    setFormData(prev => ({ ...prev, [name]: cleanedValue }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    // Final cleanup before submission
-    const submitData = {
-      ...formData,
-      email: formData.email.trim(),
-      phone: formData.phone.trim().replace(/\s+/g, ' '), // normalize multiple spaces
-    };
-
-    console.log('Form Submitted:', submitData);
-    alert('Form submitted successfully! (Demo)');
-    
-    // TODO: Send to your API / n8n workflow
+    setFormData((prev) => ({
+      ...prev,
+      [name]: cleanedValue,
+    }));
   };
 
   return (
     <div className="request-container">
       <div className="request-card">
 
-        {/* Left Sidebar - Contact Details */}
+        {/* Left Sidebar */}
         <div className="contact-sidebar">
           <div className="contact-header">
             <h2>Contact Details</h2>
@@ -59,6 +42,7 @@ const RequestForServices = () => {
           </div>
 
           <div className="contact-info">
+
             <div className="info-item">
               <div className="icon-circle">
                 <Phone size={20} />
@@ -85,34 +69,103 @@ const RequestForServices = () => {
               </div>
               <div>
                 <p className="label">Working Hours</p>
-                <p className="value">Mon to Fri: 9.00am to 5.00pm</p>
+                <p className="value">
+                  Mon to Fri: 9.00am to 5.00pm
+                </p>
               </div>
             </div>
+
           </div>
         </div>
 
-        {/* Right Side - Form */}
+        {/* Form Section */}
         <div className="form-section">
+
           <div className="form-header">
-            <span className="tag">REQUEST FOR SERVICES</span>
-            <h1>Let us know your areas of interest so that we can serve you better.</h1>
+            <span className="tag">
+              REQUEST FOR SERVICES FORM
+            </span>
+
+            <h1>
+              Let us know your areas of interest so that
+              we can serve you better.
+            </h1>
           </div>
 
-          <form onSubmit={handleSubmit} className="service-form">
+          <form
+            action="https://formsubmit.co/byruanilkumar011@gmail.com"
+            method="POST"
+            className="service-form"
+          >
+
+            {/* Hidden settings */}
+
+            <input
+              type="hidden"
+              name="_subject"
+              value="New Service Request"
+            />
+
+            <input
+              type="hidden"
+              name="_captcha"
+              value="false"
+            />
+
+            <input
+              type="hidden"
+              name="_template"
+              value="table"
+            />
+
+            <input
+              type="hidden"
+              name="_next"
+              value="http://localhost:3000/thank-you"
+            />
+
+            {/* Name + Company */}
+
             <div className="form-row">
+
               <div className="form-group">
-                <label>Your Name <span className="required">*</span></label>
-                <input type="text" name="name" value={formData.name} onChange={handleChange} required />
+                <label>
+                  Your Name <span className="required">*</span>
+                </label>
+
+                <input
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                />
               </div>
 
               <div className="form-group">
-                <label>Company <span className="required">*</span></label>
-                <input type="text" name="company" value={formData.company} onChange={handleChange} required />
+                <label>
+                  Company <span className="required">*</span>
+                </label>
+
+                <input
+                  type="text"
+                  name="company"
+                  value={formData.company}
+                  onChange={handleChange}
+                  required
+                />
               </div>
+
             </div>
 
+            {/* Email */}
+
             <div className="form-group">
-              <label>Email (Business Email Only) <span className="required">*</span></label>
+              <label>
+                Email (Business Email Only)
+                <span className="required">*</span>
+              </label>
+
               <input
                 type="email"
                 name="email"
@@ -123,35 +176,72 @@ const RequestForServices = () => {
               />
             </div>
 
+            {/* Phone + Service */}
+
             <div className="form-row">
+
               <div className="form-group">
-                <label>Phone Number <span className="required">*</span></label>
+                <label>
+                  Phone Number
+                  <span className="required">*</span>
+                </label>
+
                 <input
                   type="tel"
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
                   required
-                  placeholder="+91 (555) 123-4567"
+                  placeholder="+91 98765 43210"
                 />
               </div>
 
               <div className="form-group">
-                <label style={{height:"20px"}}>Choose Service</label>
-                <select name="service" value={formData.service} onChange={handleChange}>
-                  <option value="">Select a service</option>
-                  <option value="web-development">Web Development</option>
-                  <option value="mobile-app">Mobile App Development</option>
-                  <option value="ai-ml">AI & Machine Learning</option>
-                  <option value="cloud">Cloud Solutions</option>
-                  <option value="consulting">Consulting</option>
-                  <option value="erp-sap">ERP - SAP</option>
+                <label>Choose Service</label>
+
+                <select
+                  name="service"
+                  value={formData.service}
+                  onChange={handleChange}
+                >
+                  <option value="">
+                    Select a service
+                  </option>
+
+                  <option value="web-development">
+                    Web Development
+                  </option>
+
+                  <option value="mobile-app">
+                    Mobile App Development
+                  </option>
+
+                  <option value="ai-ml">
+                    AI & Machine Learning
+                  </option>
+
+                  <option value="cloud">
+                    Cloud Solutions
+                  </option>
+
+                  <option value="consulting">
+                    Consulting
+                  </option>
+
+                  <option value="erp-sap">
+                    ERP - SAP
+                  </option>
+
                 </select>
               </div>
+
             </div>
+
+            {/* Message */}
 
             <div className="form-group">
               <label>Your Message...</label>
+
               <textarea
                 name="message"
                 value={formData.message}
@@ -162,12 +252,19 @@ const RequestForServices = () => {
             </div>
 
             <div className="submit-wrapper">
-              <button type="submit" className="submit-btn">
+
+              <button
+                type="submit"
+                className="submit-btn"
+              >
                 SEND
                 <Send size={20} />
               </button>
+
             </div>
+
           </form>
+
         </div>
       </div>
     </div>

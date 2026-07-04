@@ -12,12 +12,41 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Hero />
-      <About />
-      <Services />
-      <Clients/>
-      <RequestForServices/>
-      <Footer/>
+
+      {/* Main Sections with IDs for Navigation */}
+      <section id="home">
+        <Hero />
+      </section>
+
+      <section id="about">
+        <About />
+      </section>
+
+      <section id="services">
+        <Services />
+      </section>
+
+      {/* Add more sections as needed */}
+      <section id="technologies">
+        {/* If you have a Technologies component, put it here */}
+        {/* Or move content from Services if needed */}
+      </section>
+
+      <section id="advanced-analytics">
+        {/* Advanced Analytics content goes here */}
+      </section>
+
+      <section id="clients">
+        <Clients />
+      </section>
+
+      <section id="request-services">
+        <RequestForServices />
+      </section>
+      <section id="contact">
+        
+      <Footer />
+      </section>
     </div>
   );
 }

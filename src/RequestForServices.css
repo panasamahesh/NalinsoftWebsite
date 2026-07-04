@@ -1,10 +1,10 @@
 .request-container {
-  min-height: 70vh;
+  min-height: 100vh;
   background-color: #f8f9fa;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 104px;
+  padding: 40px 20px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
@@ -17,6 +17,7 @@
   flex-direction: column;
   overflow: hidden;
   border: 1px solid #e5e7eb;
+  border-radius: 12px;
 }
 
 @media (min-width: 768px) {
@@ -24,18 +25,15 @@
     flex-direction: row;
   }
 }
-
-/* Contact Sidebar */
 .contact-sidebar {
   background-color: #f9fafb;
-  padding: 48px 36px;
-  border-right: 1px solid #e5e7eb;
+  padding: 40px 24px;
   flex: 1;
-  min-width: 320px;
+  min-width: 300px;
 }
 
 .contact-header h2 {
-  font-size: 1.85rem;
+  font-size: 1.75rem;
   font-weight: 700;
   color: #111827;
   margin-bottom: 12px;
@@ -48,16 +46,16 @@
 }
 
 .contact-info {
-  margin-top: 48px;
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
-  gap: 36px;
+  gap: 32px;
 }
 
 .info-item {
   display: flex;
   align-items: flex-start;
-  gap: 18px;
+  gap: 16px;
 }
 
 .info-item .icon-circle {
@@ -69,7 +67,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #0000e0;
+  color: #1e40af;
   flex-shrink: 0;
 }
 
@@ -82,17 +80,14 @@
 
 .info-item .value {
   font-weight: 600;
-  color: #000000;
+  color: #111827;
   font-size: 1.05rem;
 }
 
 /* Form Section */
 .form-section {
   flex: 1.35;
-  padding: 48px 36px;
-}
-input{
-  height: 1px;
+  padding: 50px 40px;
 }
 
 .form-header .tag {
@@ -104,15 +99,15 @@ input{
 }
 
 .form-header h1 {
-  font-size: 2.15rem;
+  font-size: 2rem;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.25;
   color: #111827;
   margin-top: 12px;
 }
 
 .service-form {
-  margin-top: 36px;
+  margin-top: 32px;
 }
 
 .form-group {
@@ -122,7 +117,7 @@ input{
 .form-row {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 24px;
+  gap: 20px;
 }
 
 @media (min-width: 768px) {
@@ -135,12 +130,10 @@ input{
   display: block;
   margin-bottom: 8px;
   font-weight: 500;
-  color: #000000;
+  color: #111827;
 }
 
-.required {
-  color: #e71f1f;
-}
+.required { color: #e71f1f; }
 
 .form-group input,
 .form-group select,
@@ -148,7 +141,7 @@ input{
   width: 100%;
   padding: 14px 16px;
   border: 1px solid #d1d5db;
-  border-radius: 0;
+  border-radius: 6px;
   font-size: 1rem;
   transition: all 0.2s;
 }
@@ -164,20 +157,21 @@ input{
 .submit-wrapper {
   display: flex;
   justify-content: flex-end;
-  margin-top: 20px;
+  margin-top: 16px;
 }
 
 .submit-btn {
   background-color: #1e40af;
   color: white;
   border: none;
-  padding: 16px 36px;
+  padding: 16px 40px;
   font-size: 1.1rem;
   font-weight: 600;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   cursor: pointer;
+  border-radius: 6px;
   transition: all 0.3s;
 }
 
@@ -186,9 +180,35 @@ input{
   transform: translateY(-2px);
 }
 
-/* Responsive */
+/* Mobile Responsiveness */
 @media (max-width: 640px) {
-  .form-section, .contact-sidebar {
+  .request-container {
+    padding: 20px 12px;
+  }
+  
+  .contact-sidebar,
+  .form-section {
     padding: 32px 20px;
+  }
+  
+  .form-header h1 {
+    font-size: 1.75rem;
+  }
+  
+  .contact-header h2 {
+    font-size: 1.55rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .request-card {
+    border-radius: 8px;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 12px 14px;
+    font-size: 0.95rem;
   }
 }

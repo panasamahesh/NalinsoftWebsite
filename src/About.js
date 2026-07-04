@@ -7,14 +7,12 @@ const About = () => {
     <section className="about-section">
       <div className="about-container">
         <div className="about-content">
-          <p className="about-tag">About Nalinsoft</p>
+          <p className="about-tag">About </p>
           <h2 className="about-title">
-            Techno Facts Solutions - Innovating The Future of Business Through Technology
+            Nalinsoft - Transforming Businesses with Smart Technology
           </h2>
           <p className="about-description">
-            We are a forward-thinking technology company specializing in intelligent ERP solutions. 
-            Our mission is to help businesses transform complexity into clarity through innovative 
-            digital solutions.
+            At Nalinsoft, we specialize in delivering innovative technology solutions that drive business growth. From ERP systems and digital transformation to custom software development and AI-powered solutions, we help organizations embrace the future with confidence.
           </p>
         </div>
 

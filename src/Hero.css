@@ -1,13 +1,23 @@
 .hero {
   height: 100vh;
-  background: linear-gradient(rgba(29, 28, 28, 0.75), rgba(20, 20, 20, 0.85)),
+  background: linear-gradient(rgba(156, 152, 152, 0.034), rgba(73, 69, 69, 0.596)),
               url('./Assets/coworkers-meeting-hall-office.jpg.jpeg') center/cover no-repeat;
   display: flex;
   align-items: center;
   position: relative;
   overflow: hidden;
 }
+html {
+  scroll-behavior: smooth;
+}
 
+/* Optional: Make header sticky */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: white; /* or whatever your background is */
+}
 .hero::before {
   content: '';
   position: absolute;
