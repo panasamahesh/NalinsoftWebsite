@@ -12,13 +12,13 @@
 }
 
 .service-card {
-  background: #426fe626;
+  background: rgb(237 237 237 / 30%);
   border: 1px solid #d5d8df;
   border-radius: 12px;
   padding: 1rem 2.9rem;
   box-shadow: 0 10px 30px rgb(184, 183, 183);
   flex-direction: column;
-  min-height: 560px;
+  min-height: 444px;
   transition: all 0.3s ease;
 }
 
