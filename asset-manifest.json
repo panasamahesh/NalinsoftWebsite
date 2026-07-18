@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/NalinsoftWebsite/static/css/main.1ec9408b.css",
+    "main.css": "/NalinsoftWebsite/static/css/main.9ffc4a33.css",
     "main.js": "/NalinsoftWebsite/static/js/main.e0605e94.js",
     "static/js/453.7f61cac5.chunk.js": "/NalinsoftWebsite/static/js/453.7f61cac5.chunk.js",
     "static/media/coworkers-meeting-hall-office.jpg.jpeg": "/NalinsoftWebsite/static/media/coworkers-meeting-hall-office.jpg.8aff5a877781c2064413.jpeg",
@@ -8,12 +8,12 @@
     "static/media/imagenewupdated.jpg": "/NalinsoftWebsite/static/media/imagenewupdated.aed4de6173752aafc1f2.jpg",
     "static/media/client1.png": "/NalinsoftWebsite/static/media/client1.7db1ca06e6fb7beb19f1.png",
     "index.html": "/NalinsoftWebsite/index.html",
-    "main.1ec9408b.css.map": "/NalinsoftWebsite/static/css/main.1ec9408b.css.map",
+    "main.9ffc4a33.css.map": "/NalinsoftWebsite/static/css/main.9ffc4a33.css.map",
     "main.e0605e94.js.map": "/NalinsoftWebsite/static/js/main.e0605e94.js.map",
     "453.7f61cac5.chunk.js.map": "/NalinsoftWebsite/static/js/453.7f61cac5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1ec9408b.css",
+    "static/css/main.9ffc4a33.css",
     "static/js/main.e0605e94.js"
   ]
 }
